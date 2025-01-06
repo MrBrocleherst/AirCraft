@@ -1,9 +1,9 @@
 package org.example;
 
-class FighterAircraftF16 extends Aircraft {
+class FighterAircraftF22 extends Aircraft {
     private double fighterVolume;
 
-    public FighterAircraftF16(String model, int maxSpeed, int range, double payload, double cargoVolume) {
+    public FighterAircraftF22(String model, int maxSpeed, int range, double payload, double cargoVolume) {
         super(model, maxSpeed, range, payload);
         this.fighterVolume = fighterVolume;
     }
