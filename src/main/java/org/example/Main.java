@@ -10,23 +10,21 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        List<Aircraft> aircraftList = new ArrayList();
-        aircraftList.add(new PassengerAircraft("Boeing 747", 900, 15000, 400.0, 416));
-        aircraftList.add(new CargoAircraft("Antonov An-225", 850, 12000, 250.0, 1300.0));
-        aircraftList.add(new FighterAircraft("F-22 Raptor", 2410, 2960, 19.7, "Air-to-Air Missiles"));
+        List<Aircraft> aircraftsList = new ArrayList();
+        aircraftsList.add(new PassengerAircraft("Boeing 747", 900, 15000, 400.0, 416));
+        aircraftsList.add(new CargoAircraft("Antonov An-225", 850, 12000, 250.0, 1300.0));
+        aircraftsList.add(new FighterAircraft("F-22 Raptor", 2410, 2960, 19.7, "Air-to-Air Missiles"));
         System.out.println("All Aircraft:");
-        Iterator var2 = aircraftList.iterator();
 
-        while(var2.hasNext()) {
-            Aircraft aircraft = (Aircraft)var2.next();
+        for (Aircraft aircraft : aircraftsList) {
             System.out.println(aircraft);
         }
 
-        Aircraft maxRangeAircraft = findAircraftWithMaxRange(aircraftList);
+        Aircraft maxRangeAircraft = findAircraftWithMaxRange(aircraftsList);
         System.out.println("\nAircraft with the longest range:");
         System.out.println(maxRangeAircraft);
         String searchModel = "Antonov An-225";
-        Aircraft foundAircraft = findAircraftByModel(aircraftList, searchModel);
+        Aircraft foundAircraft = findAircraftByModel(aircraftsList, searchModel);
         System.out.println("\nSearch result for model \"" + searchModel + "\":");
         if (foundAircraft != null) {
             System.out.println(foundAircraft);
