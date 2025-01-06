@@ -1,3 +1,4 @@
-target/
 # Ігнорування папки .idea (налаштування JetBrains IDE)
 .idea/
+# Ігнорування папки target (згенеровані файли збірки Maven/Gradle)
+target/
